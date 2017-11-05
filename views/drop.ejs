@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Donate
+        </title>
+        <link rel='stylesheet' type='text/css' href="/donate.css">
+        <style>
+           body{
+        background-color: #264577;
+        font-family: 'Times New Roman', Times, serif; 
+        font-size: 19px;
+        color : #001100;
+        }
+        </style> 
+     </head>
+     
+    <body>
+        <% include admin.ejs %>
+           <form method="POST" action="/drop">
+        <label for="donor">DONOR ID: </label><input type="number" name="donor"><br>
+        <label for="org">ORGANISATION ID:</label><input type="number" name="org"><br>
+        <label for="item">ITEM ID:</label><input type="number" name="item"><br>
+        <button type="submit" value="submit">SUBMIT</button>
+        </form>
+        </body>
+</html>

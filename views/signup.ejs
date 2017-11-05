@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>
+            SIGNUP
+        </title>
+    </head>
+    <body>
+        <% include top.ejs %>
+        <section class="content">
+        <div class="container-fluid">
+            <div class="block-header">
+        </div>
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card" style="width : 85%; margin-left : 40px">
+                        <div class="header">
+                            <h2>SIGNUP : WELCOME TO THE COMMUNITY</h2>
+                         </div>
+                        <div class="body">
+                        <section>
+        <form method="POST" action="/signup">
+        <div class="body table-responsive">
+        <table class="table table-bordered">          
+        <tr><td><label for ="Type">Who are you?</label><br></td>
+        <td><input name="Type" type="radio" value ="donor" class="with-gap" id="radio_1" required checked="checked"/>
+        <label for="radio_1">Donor</label></td>
+        <td><input name="Type" type="radio" value ="organisation" class="with-gap" id="radio_2" required/>
+        <label for="radio_2">Organisation</label></td></tr>
+        </table>
+        <table class="table">
+        <tr><td><label for="Name">NAME:</label></td><td style="padding-bottom:0%"><div class="col-sm-12"><div class="form-group form-float">
+        <div class="form-line"><input type="text" name="Name" class="form-control" required></div></div></td></tr>
+        <tr><td><label for="Email">EMAIL:</label></td><td style="padding-bottom:0%"><div class="col-sm-12"><div class="form-group form-float">
+        <div class="form-line"><input type="email" name="Email" class="form-control" required></div></div></td></tr>
+        <tr><td><label for="Address">ADDRESS:</label></td><td style="padding-bottom:0%"><div class="col-sm-12"><div class="form-group form-float">
+        <div class="form-line"><input type="text" name="Address" class="form-control" required></div></div></td></tr>
+        <tr><td><label for="City">CITY:</label></td><td style="padding-bottom:0%"><div class="col-sm-12"><div class="form-group form-float">
+        <div class="form-line"><input type="text" name="City" class="form-control" required></div></div></td></tr>
+        <tr><td><label for="Contactno">CONTACT:</label></td><td style="padding-bottom:0%"><div class="col-sm-12"><div class="form-group form-float">
+        <div class="form-line"><input type="number" name="Contactno" class="form-control" required></div></div></td></tr>       
+        <tr><td><label for="Password">PASSWORD:</label></td><td style="padding-bottom:0%"><div class="col-sm-12"><div class="form-group form-float">
+        <div class="form-line"><input type="password" name="Password" class="form-control" required></div></div></td></tr> 
+        <tr><td><label for="Username">USERNAME:</label></td><td style="padding-bottom:0%"><div class="col-sm-12"><div class="form-group form-float">
+        <div class="form-line"><input type="text" name="Username" class="form-control" required></div></div></td></tr> 
+        </table>
+        </div>
+        <button type="submit" class="btn bg-teal waves-effect" style="float : right">SUBMIT</button>
+        <br><br>
+        </form>
+    </section>
+</section>    
+</body>
+</html>

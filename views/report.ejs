@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Reports
+        </title>
+    </head>
+    <body>
+    <% include admin.ejs %>
+    <section class="content">
+    <div class="container-fluid">
+        <div class="block-header">
+        </div>
+    <div class="row clearfix">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="card" style="width:100%;margin-top : 30px">  
+                <div class="body table-responsive">
+                    <div class="header">
+                        <h2>
+                            <%=name%> Report
+                        </h2>
+                    </div> 
+                    <br><br>
+                        <table class="table table-bordered" border="1" cellpadding="7" cellspacing="7">
+                            <tr>
+                                <th>Date</th>
+                                <th>Donor_id</th>
+                                <th>Item id</th>
+                                <th>Item Desc</th> 
+                                <th>Quantity Donated</th>                             
+                        </tr>
+                          <% if(day1.length){ 
+                            for(var i = 0;i < day1.length;i++) { %>
+                          <tr>
+                            <td><%=day1[i].Date%></td>                            
+                            <td><%=day1[i].Donor_id%></td> 
+                            <td><%=day1[i].Item_id%></td>
+                            <td><%=day1[i].Item_desc%></td>
+                            <td><%=day1[i].DQ%></td>
+                          </tr> 
+                        <%}%>
+                          <% }if(day2.length){ 
+                            for(var i = 0;i < day2.length;i++) { %>
+                          <tr>  
+                            <td><%=day2[i].Date%></td>                             
+                            <td><%=day2[i].Donor_id%></td> 
+                            <td><%=day2[i].Item_id%></td>
+                            <td><%=day2[i].Item_desc%></td>
+                            <td><%=day2[i].DQ%></td>
+                        </tr>
+                        <%}%>
+                        <% }if(day3.length){ 
+                            for(var i = 0;i < day3.length;i++) { %>
+                          <tr>                            
+                            <td><%=day3[i].Date%></td> 
+                            <td><%=day3[i].Donor_id%></td> 
+                            <td><%=day3[i].Item_id%></td>
+                            <td><%=day3[i].Item_desc%></td>
+                            <td><%=day3[i].DQ%></td>
+                        </tr>
+                        <%}%>
+                        <% }if(day4.length){ 
+                            for(var i = 0;i < day4.length;i++) { %>
+                          <tr>  
+                            <td><%=day4[i].Date%></td>                             
+                            <td><%=day4[i].Donor_id%></td> 
+                            <td><%=day4[i].Item_id%></td>
+                            <td><%=day4[i].Item_desc%></td>
+                            <td><%=day4[i].DQ%></td>
+                        </tr>
+                        <%}%>
+                        <% }if(day5.length){ 
+                            for(var i = 0;i < day5.length;i++) { %>
+                          <tr>                            
+                            <td><%=day5[i].Date%></td> 
+                            <td><%=day5[i].Donor_id%></td> 
+                            <td><%=day5[i].Item_id%></td>
+                            <td><%=day5[i].Item_desc%></td>
+                            <td><%=day5[i].DQ%></td>
+                        </tr>
+                        <%}%>
+
+                          <% }else{ %>
+                          <tr>
+                            <td colspan="3">No Further Entries</td>
+                          </tr>
+                        <% } %>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+           </div>
+           </section>
+
+    </body>
+
+</html> 

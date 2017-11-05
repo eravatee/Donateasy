@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        Books and CDs
+        </title>
+    </head>
+    <body>
+       <% include admin.ejs %>
+               <section class="content">
+        <div class="container-fluid">
+            <div class="block-header">
+        </div>
+
+             <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card" style="width:80%; margin-left : 40px; margin-top : 30px">  
+                      <div class="body table-responsive">
+                        <div class="header">
+                            <h2>
+                                Donors
+                            </h2>
+                            </div> 
+                            <br><br>     
+                                <table class="table table-bordered" border="1" cellpadding="7" cellspacing="7">
+                                <tr>
+
+                                  <th width="50px">Donor Id</th>
+                                  <th>Name</th>
+                                  <th>Address</th>
+                                  <th>City</th>
+                                  <th>Contact no.</th>
+                                  <th>Email</th>
+                                  <!--<th>Username</th>-->
+                                </tr>
+                                <% if(data.length){ 
+                                  for(var i = 0;i < data.length;i++) { %>
+                                <tr>
+                                  <td><%=data[i].Donor_id%></td>
+                                  <td><%=data[i].Name%></td>
+                                  <td><%=data[i].Address%></td>
+                                  <td><%=data[i].City%></td>
+                                  <td><%=data[i].Contactno%></td>
+                                  <td><%=data[i].Email%></td>
+                                  <!--<td><%=data[i].Usename%></td>-->
+                                </tr>
+                                <% }
+                                }else{ %>
+                                <tr>
+                                  <td colspan="3">No user</td>
+                                </tr>
+                              <% } %>
+                              </table>
+                                    </div>
+                                </div>
+                              </div>
+                          </div>
+                          </section>
+</body>
+</html> 

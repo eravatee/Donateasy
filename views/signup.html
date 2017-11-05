@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DonatEasy</title>
+<meta charset="utf-8">
+<meta name = "format-detection" content = "telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+#mySidenav a {
+    position: fixed;
+    right: -140px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 250px;
+    text-decoration: none;
+    font-size: 30px;
+    text-align: left;
+    color: white;
+    height: 30px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#mySidenav a:hover {
+    right: 0;
+}
+
+#home {
+    top: 250px;
+    background-color: #FA8080;
+}
+
+#login {
+    top: 325px;
+    background-color: #FA8080;
+}
+
+#signup {
+    top: 400px;
+    background-color: #FA8080;
+}
+
+#contact {
+    top: 475px;
+    background-color: #FA8080
+}
+
+#about {
+    top: 550px;
+    background-color: #FA8080
+}
+
+div.container {
+    width: 100%;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    color: white;
+    background-color: #264577;
+    clear: left;
+    text-align: center;
+    font-size: 500%;
+}
+
+footer{
+        margin-top: 100%; 
+        color: white;
+        background-color: transparent;
+        clear: left;
+        text-align: center;
+} 
+
+body {
+
+ background-color: #fafafa; 
+ width: 100%;
+ overflow-x: hidden;
+ padding: 0;
+ margin: 0;
+}
+
+section {
+  display: block;
+}
+
+/* ==============================================================================================================================// */
+.outer{
+   position: relative;
+    height: 105vh;
+    overflow: hidden;
+}
+
+.inner-container{
+  width:600px;
+  height:1050px;
+  position:absolute;
+  left:calc(50vw - 300px);
+  overflow: hidden; 
+}
+
+.box{
+  position:absolute;
+  height:100%;
+  width:100%;
+  font-family:Helvetica;
+  color:#fff;
+  background:rgba(0,0,0,0.13);
+  padding:20px 0px;
+}
+.box h1{
+  text-align:center;
+  margin:30px 0;
+  font-size:30px;
+}
+.box input{
+  display:block;
+  width:450px;
+  height: 30px;
+  margin:10px auto;
+  padding:15px;
+  background:rgba(0,0,0,0.2);
+  color:#fff;
+  border:0;
+}
+
+.radiobtn input[type=radio]:not(old)
+{
+  width:20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+.box input:focus,.box input:active,.box button:focus,.box button:active{
+  outline:none;
+}
+.box button{
+  background:#742ECC;
+  border:0;
+  color:#fff;
+  padding:10px;
+  font-size:25px;
+  width:330px;
+  height: 50px;
+  margin:20px auto;
+  display:block;
+  cursor:pointer;
+}
+.box button:active{
+  background:#27ae60;
+}
+.box p{
+  font-size:18px;
+  text-align:center;
+}
+.box p span{
+  cursor:pointer;
+  color:#666;
+}
+
+/*==============================================================================================================================//*/
+ 
+</style>
+</head>
+
+<body>
+
+<div class="container">
+ <div id="mySidenav" class="sidenav">
+  <a href="/" id="home">Home</a>
+  <a href="/login" id="login">Login</a>
+  <a href="/signup" id="signup">Sign Up</a>
+  <a href="/contacts" id="contact">Contact</a>
+  <a href="/about" id="about">About</a>
+</div> 
+<header>
+       <!-- <h1>DONATEASY</h1> -->
+  <div class="container_12" style="position: fixed; text-align: center; margin-left: 75px;">
+    <div class="grid_12">
+      <h1 class="logo">
+        <a href="home.html"><br>
+          DONATEASY<br>
+          <span>It is about making a difference!</span>
+        </a>
+      </h1>
+    </div>
+    <div class="clear"></div>
+  </div>
+</header>
+  
+
+<div style="padding-top: 350px;">
+
+
+<div class="outer" style="width: 80%;">
+  <div class="inner-container">
+    <div class="box">
+      <h2 style="font-size: 75px; text-align: center; color: white;">Sign Up</h2>
+          <form method="POST" action="/signup">
+        <label for ="Type">TYPE:</label><input type="radio" name="Type" value="donor">Donor<br>
+        <input type="radio" name="Type" value="organisation">Organisation<br>
+        <label for="Name">NAME:</label><input type="text" name="Name"><br>
+        <label for="Email">EMAIL:</label><input type="text" name="Email"><br>
+        <label for="Address">ADDRESS:</label><input type="text" name="Address"><br>
+        <label for="City">CITY:</label><input type="text" name="City"><br>
+        <label for="Contactno">CONTACT NUMBER:</label><input type="text" name="Contactno"><br>        
+        <label for="Password">PASSWORD:</label><input type="password" name="Password"><br>
+        <label for="Username">USERNAME:</label><input type="text" name="Username"><br>
+        <button type="submit" value="submit">SUBMIT</button>
+        </form>
+    <p>Need help? <span><a href="home.html">We're here for you!</a></span></p>
+    </div>
+  </div>
+</div>
+
+
+<script language="javascript">
+
+function checkEmail() {
+
+    var email = document.getElementById('txtEmail');
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+    if (!filter.test(email.value)) {
+    alert('Please provide a valid email address');
+    email.focus;
+    return false;
+ }
+}</script>
+
+
+<!-- pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" 
+pattern="^\d{4}-\d{3}-\d{4}$" -->
+
+</div>
+<footer id="footer">
+  <div class="container_12">
+    <div class="grid_12"> 
+      <h1 class="logo">
+        <a href="home.html"> <br>
+          DONATEASY
+        </a>
+      </h1>
+      <div class="socials">
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-google-plus"></a>
+        <a href="#" class="fa fa-pinterest"></a>
+      </div>
+      <div class="sub-copy">&copy; <span id="copyright-year"></span>| <a href="#">Privacy Policy</a> <br> Website designed by SSER</div>
+    </div>
+    <div class="clear"></div>
+  </div>  
+</footer>
+</div>
+</body>
+</html> 
